@@ -1,6 +1,3 @@
-[![](https://img.shields.io/badge/Microverse-Afolabi%20Akorede-blueviolet)](https://github.com/brainconnect93)
-
-
 # Blog-App
 
 > This is a fully functional website that shows the list of posts and empower readers to interact with them by adding comments, managing their blog posts and liking posts.
@@ -25,7 +22,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 Clone this repository or download the Zip folder:
 ```
-  $ git clone https://github.com/brainconnect93/Blog-App.git
+  $ git clone https://github.com/ademibowale/Blog-app-data-model.git
   $ cd Blog-App
 ```
 
@@ -58,13 +55,14 @@ Install all project dependencies by running the command below
   $ Rspec spec
 
 ```
+## Authors
 
-## Author
-👤 **Afolabi Akorede**
+👤 **Ademibowale**
 
-- GitHub: [@brainconnect93](https://github.com/brainconnect93)
-- Twitter: [@brainconnect0](https://twitter.com/brainconnect0)
-- LinkedIn: [Afolabi Akorede](https://linkedin.com/in/brainconnect93)
+- GitHub: [@ademibowale](https://github.com/ademibowale/)
+- Twitter: [@Ademobowale1](https://twitter.com/Ademibowale1)
+- LinkedIn: [Adebowale](https://www.linkedin.com/in/tech-adebowale-adegboye/)
+
 
 ## 🤝 Contributing
 
