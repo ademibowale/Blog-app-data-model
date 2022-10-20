@@ -5,6 +5,8 @@ class Post < ApplicationRecord
 
   after_save :updates_posts_counter
 
+private
+
   def updates_posts_counter
     user.increment!(:PostsCounter)
   end
