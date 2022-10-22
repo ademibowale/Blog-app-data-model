@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe Like, type: :model do
   before(:all) do
     @user = User.create(
-      Name: 'Afolabi',
+      Name: 'Adewbowale',
       Photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
       Bio: 'I am a graphic designer',
       PostsCounter: 0
     )
     @post = Post.create(
-      title: 'Harry Potter',
-      text: 'the sorcerers stone',
+      title: 'James bone',
+      text: 'the brave',
       author_id: @user.id,
       comments_counter: 0,
       likes_counter: 0

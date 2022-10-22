@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   before(:all) do
     @user = User.create(
-      Name: 'Akorede',
+      Name: 'Adewale',
       Photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
       Bio: 'Am a software developer',
       PostsCounter: 2
     )
     @post = Post.create(
-      title: 'Harry Potter',
+      title: 'James packer',
       text: 'the sorcerers stone',
       author_id: @user.id,
       comments_counter: 4,
