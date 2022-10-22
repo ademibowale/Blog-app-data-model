@@ -11,17 +11,17 @@ RSpec.describe Comment, type: :model do
             @post = Post.create(
               title: 'james Packer',
               text: 'the valley',
-              author_id: @user.id,
+              user_id: @user.id,
               comments_counter: 0,
               likes_counter: 0
             )
           end
         
           it 'comments_counter should increase by one' do
-            Comment.create(text: 'Hello world!', author_id: @user.id, post_id: @post.id)
-            Comment.create(text: 'Thank God Its Friday!', author_id: @user.id, post_id: @post.id)
+            Comment.create(text: 'Hello world!', user_id: @user.id, post_id: @post.id)
+            Comment.create(text: 'Thank God Its Friday!', user_id: @user.id, post_id: @post.id)
             post = Post.new(@post.id)
-            expect(post.comments_counter).to eq(nil)
+            expect(@post.comments_counter).to eq(nil)
           end
         end
         
