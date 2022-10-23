@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :Comments
-  has_many :likes_counter
+  has_many :comments
+  has_many :likes
 
   after_save :updates_posts_counter
 
@@ -15,9 +15,5 @@ class Post < ApplicationRecord
 
   def recent_comments
     comments.order(created_at: :desc).last(5)
-  end
-
-  def self .recent(max = 5)
-    limit(max).order(created_at: :desc)
   end
 end
