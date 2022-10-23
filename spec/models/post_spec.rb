@@ -36,7 +36,7 @@ RSpec.describe Post, type: :model do
     @post.comments_counter = 'one'
     expect(@post).to_not be_valid
   end
-  
+
   it 'post likes_comment should be numeric >= 0' do
     @post.likes_counter = 'one'
     expect(@post).to_not be_valid
