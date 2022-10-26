@@ -7,7 +7,8 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = current_user.comments.new(
       post_id: @post.id,
-      
+      user_id: current_user.id,
+      text: comment_params
     )
 
     @comment.save if @comment.valid?
