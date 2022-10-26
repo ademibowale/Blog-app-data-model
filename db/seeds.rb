@@ -5,21 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-#  comment = Comment.create(title)
+# first_user = User.create(Name: 'Tom', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo', Bio: 'Teacher from Mexico', PostsCounter: 0)
+# second_user = User.create(Name: 'Lilly', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo', Bio: 'Teacher from Poland', PostsCounter: 0)
+# third_user = User.create(Name: 'Thomas', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo', Bio: 'Teacher from Rwanda', PostsCounter: 0)
 
-#  rails generate migration CreateUser name:string photo:string bio:string posts_counter:integer
-# rails generate migration CreatePost title:string text:text comments_counter:integer likes_counter:integer
-# rails generate migration CreateComments text:text
-# rails generate migration CreateLike
+Comment.create(post: first_post, user: second_user, text: 'Can we meet in the playground', post_id: 2, user_id: 2)
 
-# rails generate migration AddUserRefToPosts author:references:index
-# rails generate migration AddUserRefToComments author:references:index
-# rails generate migration AddUserRefToLikes author:references:index
-# rails generate migration AddPostRefToComments post:references:index
-# rails generate migration AddPostRefToLikes post:references:index
-
-first_user = User.create(Name: 'Tom', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo', Bio: 'Teacher from Mexico.')
-
-first_post = Post.create(user: 1, title: 'Hello', text: 'This is my first post')
-second_post = Post.create(user_id:2, title: 'Hello', text: 'This is my first post')
-third_post = Post.create(user_id: 2, title: 'Hello', text: 'This is my first post')
+first_post = Post.create(user: first_user, title: 'DreamLand', text: 'Welcome to the world of wonderLand', comments_counter: 0, likes_counter: 0)
