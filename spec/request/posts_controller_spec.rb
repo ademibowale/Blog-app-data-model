@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 RSpec.describe PostsController, type: :request do
   describe 'Check post main page' do
     before(:example) do
@@ -11,7 +12,7 @@ RSpec.describe PostsController, type: :request do
     end
 
     it 'Check the if the rendered template is correct' do
-      expect(response.body).to include('<h1>User Posts page</h1>')
+      expect(response.body).to include('<h1>Here is a list of posts for a given user</h1>')
     end
   end
 
@@ -23,7 +24,7 @@ RSpec.describe PostsController, type: :request do
 
     it 'Check the posts page for a given user' do
       expect(response).to render_template(:show)
-      expect(response.body).to include('<h2>Here is a list of posts for a given user</h2>')
+      expect(response.body).to include('<h2>This is my todo list</h2>')
       expect(response.status).to be(200)
     end
   end
