@@ -14,7 +14,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'Check the placeholder text' do
-      expect(response.body).to include('<h1>Here is a list of posts for a given user</h1>')
+      expect(response.body).to include('<h1>My Favourite blog App</h1>')
     end
   end
 
