@@ -14,7 +14,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'Check the placeholder text' do
-      expect(response.body).to include('<h1>Users</h1>')
+      expect(response.body).to include('<h1>Here is a list of posts for a given user</h1>')
     end
   end
 
@@ -32,7 +32,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'Check if it has the correct placeholder text' do
-      expect(response.body).to include('<h2>users display</h2>')
+      expect(response.body).to include('<h1>Hello, My name is ADEBOWALE. I\'m railing</h1>')
     end
   end
 end

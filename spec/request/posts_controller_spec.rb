@@ -24,7 +24,7 @@ RSpec.describe PostsController, type: :request do
 
     it 'Check the posts page for a given user' do
       expect(response).to render_template(:show)
-      expect(response.body).to include('<h2>This is my todo list</h2>')
+      expect(response.body).to include('<h1>This is my todo list</h1>')
       expect(response.status).to be(200)
     end
   end
