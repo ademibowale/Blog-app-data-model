@@ -60,7 +60,7 @@ Install all project dependencies by running the command below
 👤 **Ademibowale**
 
 - GitHub: [@ademibowale](https://github.com/ademibowale/)
-- Twitter: [@Ademobowale1](https://twitter.com/Ademibowale1)
+- Twitter: [@Ademibowale1](https://twitter.com/Ademibowale1)
 - LinkedIn: [Adebowale](https://www.linkedin.com/in/tech-adebowale-adegboye/)
 
 
