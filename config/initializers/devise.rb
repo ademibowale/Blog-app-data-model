@@ -87,6 +87,8 @@ Devise.setup do |config|
   # The realm used in Http Basic Authentication. 'Application' by default.
   # config.http_authentication_realm = 'Application'
 
+  config.scoped_views = true
+
   # It will change confirmation, password recovery and other workflows
   # to behave the same regardless if the e-mail provided was right or wrong.
   # Does not affect registerable.
