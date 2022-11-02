@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'post', type: :system do
   describe 'post show page' do
     before :all do
-      @user = User.create(name: 'Alfred', photo: 'https://somewebsite.com',
+      @user = User.create(name: 'Doe', photo: 'https://somewebsite.com',
                           bio: 'I am a software developer', posts_counter: 1)
       @post = Post.create(title: 'About', text: 'This is a post', author: @user, comments_counter: 0,
                           likes_counter: 0)

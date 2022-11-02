@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe 'post', type: :system do
   describe 'post index page' do
     before :all do
-      @user = User.create(name: 'Alfred', photo: 'https://somewebsite.com',
+      @user = User.create(name: 'Doe', photo: 'https://somewebsite.com',
                           bio: 'I am a software developer', posts_counter: 0)
       @post = Post.create(title: 'About', text: 'This is a post', author: @user, comments_counter: 0, likes_counter: 0)
     end
 
     it 'I can see the user\'s name' do
       visit user_posts_path(@user)
-      expect(page).to have_content('Alfred')
+      expect(page).to have_content('Adebowale')
     end
     it 'display profile picture' do
       visit user_posts_path(@user)

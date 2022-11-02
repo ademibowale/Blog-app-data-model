@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'user', type: :system do
   describe 'user show page' do
     before :all do
-      @user = User.create(id: 11, name: 'Alfred', photo: 'https://somewebsite.com',
+      @user = User.create(id: 11, name: 'Doe', photo: 'https://somewebsite.com',
                           bio: 'I am a software developer', posts_counter: 0)
     end
 
