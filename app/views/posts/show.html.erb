@@ -12,6 +12,6 @@
 
 <ul>
   <% @post.recent_comments.each do |comment| %>
-    <li><%= comment.user.Name %> : <%= comment.text %>
+    <li><%= comment.user.Name %> : <%= comment.text %></li>
   <% end %>
 </ul>
