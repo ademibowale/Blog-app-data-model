@@ -1,16 +1,17 @@
 <h1>Single post</h1>
 
-<p><%= @post.title %> by <%= @post.author.name %> Comments <%= @post.comments_counter %>, Likes <%= @post.likes_counter %></p>
+<section>
+  <h2><%= @post.title %> By: <%= @post.user.Name %></h2>
+  <div class="post-details">
+    <span>Comments: <%= @post.comments_counter || 0 %></span>
+    <span>Likes: <%= @post.likes_counter || 0 %></span>
+  </div>
 
-<p><%= @post.text %></p>
+  <p><%= @post.text %></p>
+</section>
 
 <ul>
-  <% @post.comments.each do |comment| %>
-    <p><%= comment.author.name %> : <%= comment.text %></p>
+  <% @post.recent_comments.each do |comment| %>
+    <li><%= comment.user.Name %> : <%= comment.text %>
   <% end %>
 </ul>
-
-<%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/likes" do |form| %>
-  <%= form.submit 'Like' %>
-<% end %>
-<%= link_to 'Add comment', new_user_post_comment_path(@user, @post) %>
