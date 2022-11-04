@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :confirmable,stretches: 13
+         :recoverable, :rememberable, :validatable, :confirmable, stretches: 13
   has_many :posts
   has_many :comments
   has_many :likes
@@ -12,4 +12,3 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).last(3)
   end
 end
-
