@@ -12,6 +12,25 @@ RSpec.describe User, type: :feature do
         expect(page).to have_content(user.Name)
       end
     end
+
+    it 'should see the profile picture of each user' do
+      @users.each do |user|
+        expect(page).to have_css("img[src*='#{user.Photo}']")
+      end
+    end
+
+    it 'should see the numer of posts for each user' do
+      @users.each do |user|
+        expect(page).to have_content(user.PostsCounter)
+      end
+    end
+
+    it 'should redirect to user\'s show page' do
+      @users.each do |user|
+        find_link(user.Name).click
+        expect(page).to have_current_path(user_path(user))
+      end
+    end
   end
 
   describe 'Show page' do
@@ -51,6 +70,15 @@ RSpec.describe User, type: :feature do
     end
 
     it 'should show a button to view all user\'s posts' do
+      expect(page).to have_link('See all posts')
+    end
+
+    it 'should redirect to user\'s posts page' do
+      find_link('See all posts').click
+      expect(page).to have_current_path(user_posts_path(@user.first))
+    end
+
+    it 'should have a button to let me view all user\'s post' do
       expect(page).to have_link('See all posts')
     end
   end
