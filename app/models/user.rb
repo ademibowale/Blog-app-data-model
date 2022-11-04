@@ -12,3 +12,4 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).last(3)
   end
 end
+
