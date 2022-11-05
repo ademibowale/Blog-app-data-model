@@ -1,21 +1,30 @@
-# frozen_string_literal: true
+Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      post 'authenticate', to: 'authentication#create'
+      resources :users, only: [:index, :create, :show, :destroy] do
+        resources :posts, only: [:index] do
+          resources :comments, only: [:index, :create]
+        end
+      end
+      resources :posts, only: [] do
+        resources :comments, only: [:create]
+      end
+    end
+  end
 
-Rails.application.routes.draw do   
   devise_for :users
-  # get /users to controler to action 
+  root to: 'users#show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-
-  root "users#index"
+  # root "users#index"
 
     resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :create, :new] do
-    resources :comments, only: [:create, :new]
-    resources :likes, only: [:create]
-    resources :comments, only: [:index, :show]
-    resources :likes, only: [:index, :show]
- end
- end
+      resources :comments, only: [:create, :new]
+      resources :likes, only: [:create]
+    end
+  end
 end
