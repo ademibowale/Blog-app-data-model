@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :confirmable, stretches: 13
+         :recoverable, :rememberable, :validatable, :confirmable
   has_many :posts
   has_many :comments
   has_many :likes
