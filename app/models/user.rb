@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :PostsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   before_save :assign_role
-  
+
   def recent_posts
     posts.order(created_at: :desc).last(3)
   end
